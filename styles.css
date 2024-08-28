@@ -1,0 +1,267 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif; 
+    margin: 0;
+    color: #333; 
+}
+
+.container {
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav {
+    background-color: #fff; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    padding: 20px 0;
+    position: fixed; 
+    width: 100%;
+    z-index: 10; 
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4CAF50; 
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease; 
+}
+
+nav a:hover {
+    color: #4CAF50;
+}
+
+/* Header styles (assuming this is for the landing page hero) */
+header {
+    background-image: url('path/to/your/hero-image.jpg'); 
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 150px 0; 
+    color: #fff; 
+}
+
+header h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease; 
+}
+
+.btn:hover {
+    background-color: #3e8e41;
+}
+
+/* Hero styles (assuming this is for another hero section, perhaps on a different page) */
+.hero {
+    background-image: url('https://www.squiresgardencentres.co.uk/shop/gallery/Autumn%20garden%20banner.jpg'); 
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 200px 0; 
+    color: #fff; 
+    position: relative; 
+}
+
+.hero::before { 
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.hero-content {
+    position: relative; 
+    z-index: 1;
+}
+
+.about {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Product page styles */
+main {
+    padding: 80px 0; 
+}
+
+.product-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.product-section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+}
+
+.product-card {
+    border: 1px solid #ddd; 
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; 
+}
+
+.product-card:hover {
+    transform: translateY(-5px); 
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    margin-bottom: 15px;
+}
+
+.price {
+    font-weight: bold;
+    color: #4CAF50; 
+}
+
+.add-to-cart {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #3e8e41;
+}
+/* Cart page styles */
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+    max-width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.item-details {
+    flex-grow: 1; /* Allow details to take up remaining space */
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.quantity-controls button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.quantity-controls span {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.delete-item {
+    background-color: #f44336; /* Red color for delete */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-item:hover {
+    background-color: #d32f2f;
+}
+
+.cart-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.checkout {
+    background-color: #4CAF50; /* Green color for checkout */
+}
